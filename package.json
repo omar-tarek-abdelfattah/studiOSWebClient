@@ -1,0 +1,25 @@
+{
+  "name": "with-tailwind",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "concurrently \"npm run dev --workspace=saas-app\" \"npm run dev --workspace=studio-app\"",
+    "lint": "turbo run lint",
+    "check-types": "turbo run check-types",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3",
+    "prettier": "^3.6.0",
+    "prettier-plugin-tailwindcss": "^0.7.1",
+    "turbo": "^2.9.18"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@11.5.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
